@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tic Tac Toe</title>
+	<link rel="stylesheet" type="text/css" href="tictactoe.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Section for Score Card and Turns -->
+	<div class="container" id="scoreCard">
+		<div class="row">
+			<div class="col">
+				<h3>Player 1: X</h3>
+			</div>
+			<div class="col">
+				<h3>Player 2: O</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<h3>Score: 0</h3>
+			</div>
+			<div class="col">
+				<h3>Score: 0</h3>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Heading -->
+	<div class="container">
+		<div class="row" id="Title">
+			<h1 class="gane--title">Tic Tac Toe</h1>
+		</div>
+	</div>
+
+	<!-- Section for Game Board -->
+	<div class="game--container">
+        <div data-cell-index="0" class="cell"></div>
+        <div data-cell-index="1" class="cell"></div>
+        <div data-cell-index="2" class="cell"></div>
+        <div data-cell-index="3" class="cell"></div>
+        <div data-cell-index="4" class="cell"></div>
+        <div data-cell-index="5" class="cell"></div>
+        <div data-cell-index="6" class="cell"></div>
+        <div data-cell-index="7" class="cell"></div>
+        <div data-cell-index="8" class="cell"></div>
+    </div>
+
+    
+    
+	<!-- Section for Play Again and Reset -->
+	<div class="container">
+		<div class="row" id="winnerMessage">
+			<h1 class="game--status">Player 1 Wins!</h1>
+		</div>
+		<div class="row" id="btns">
+			<button class="game--restart btn btn-primary">New Game</button>
+			<button class="btn btn-danger">Reset</button>
+		</div>
+	</div>
+	<script src="tictactoe.js"></script>
+</body>
+</html>
