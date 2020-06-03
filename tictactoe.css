@@ -7,6 +7,15 @@ body {
 	border: 1px solid black;
 }
 
+#scoreCard {
+    background-color: green;
+    margin-bottom: 10px;
+}
+
+#Title{
+    justify-content: center;
+}
+
 .game--container {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -21,28 +30,28 @@ body {
     border: 1px solid #333333;
     cursor: pointer;
 	line-height: 100px;
-    font-size: 60px;
+    font-size: 80px;
+    text-align: center;
 }
 
 .cell:hover {
-    background-color: green;
-}
-
-#Title{
-	justify-content: center;
+    background-color: grey;
 }
 
 #winnerMessage{
 	justify-content: center;
-	background-color: red;
+	background-color: green;
+}
+
+.game--status {
+    visibility: hidden;
 }
 
 #btns{
 	justify-content: center;
+    border-top: 1px solid black;
+    padding-top: 1px;
 }
 
-#scoreCard {
-	background-color: red;
-	margin-bottom: 10px;
-}
+
 
