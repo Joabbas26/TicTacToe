@@ -43,10 +43,6 @@ body {
 	background-color: green;
 }
 
-.game--status {
-    visibility: hidden;
-}
-
 #btns{
 	justify-content: center;
     border-top: 1px solid black;
