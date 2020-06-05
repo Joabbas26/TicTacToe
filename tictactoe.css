@@ -5,11 +5,13 @@ body {
 
 .container{
 	border: 1px solid black;
+    padding: 0;
 }
 
 #scoreCard {
     background-color: green;
     margin-bottom: 10px;
+    padding: 0;
 }
 
 #Title{
@@ -41,6 +43,7 @@ body {
 #winnerMessage{
 	justify-content: center;
 	background-color: green;
+    height: 50px;
 }
 
 #btns{

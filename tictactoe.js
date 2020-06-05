@@ -1,8 +1,10 @@
 let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
-let player1Score = 0;
-let player2Score = 0;
+let player1Score = document.querySelector('player1Score');
+let player2Score = document.querySelector('player2Score');
+player1Score = 0;
+player2Score = 0;
 
 const statusDisplay = document.querySelector('.game--status');
 const winningMessage = () => `${currentPlayer} Wins!`;
@@ -19,6 +21,10 @@ const winningConditions = [
     [2, 4, 6]
 ];
 
+function handlePlayerChange() {
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+}
+
 function handleResetGame() {
     gameActive = true;
     currentPlayer = "X";
@@ -26,11 +32,7 @@ function handleResetGame() {
     document.querySelectorAll('.cell')
                .forEach(cell => cell.innerHTML = "");
     player1Score = 0;
-    player1Score = 0;
-}
-
-function handlePlayerChange() {
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    player1Score = 0; 
 }
 
 function handleRestartGame() {
