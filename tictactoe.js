@@ -1,10 +1,10 @@
 let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
-let player1Score = document.querySelector('player1Score');
-let player2Score = document.querySelector('player2Score');
-player1Score = 0;
-player2Score = 0;
+let player1Score = 0;
+let player2Score = 0;
+document.getElementById('player1Score').innerHTML = "Score: 0";
+document.getElementById('player2Score').innerHTML = "Score: 0";
 
 const statusDisplay = document.querySelector('.game--status');
 const winningMessage = () => `${currentPlayer} Wins!`;
@@ -21,6 +21,11 @@ const winningConditions = [
     [2, 4, 6]
 ];
 
+function handleCellPlayed(clickedCell, clickedCellIndex) {
+    gameState[clickedCellIndex] = currentPlayer;
+    clickedCell.innerHTML = currentPlayer;
+}
+
 function handlePlayerChange() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
 }
@@ -32,7 +37,10 @@ function handleResetGame() {
     document.querySelectorAll('.cell')
                .forEach(cell => cell.innerHTML = "");
     player1Score = 0;
-    player1Score = 0; 
+    player2Score = 0;
+    document.getElementById('player1Score').innerHTML = "Score: 0";
+    document.getElementById('player2Score').innerHTML = "Score: 0";
+    statusDisplay.innerHTML = "";
 }
 
 function handleRestartGame() {
@@ -41,11 +49,7 @@ function handleRestartGame() {
     gameState = ["", "", "", "", "", "", "", "", ""];
     document.querySelectorAll('.cell')
                .forEach(cell => cell.innerHTML = "");
-}
-
-function handleCellPlayed(clickedCell, clickedCellIndex) {
-    gameState[clickedCellIndex] = currentPlayer;
-    clickedCell.innerHTML = currentPlayer;
+    statusDisplay.innerHTML = "";
 }
 
 function handleResultValidation() {
@@ -63,15 +67,18 @@ function handleResultValidation() {
             break
         }
     }
+
 if (roundWon) {
-        if (currentPlayer = 'X') {
+        if (currentPlayer === "X") {
         player1Score += 1;
+        document.getElementById('player1Score').innerHTML = `Score: ${player1Score}`;
         statusDisplay.innerHTML = winningMessage();
         gameActive = false;
         return;
         }
         else {
         player2Score += 1;
+        document.getElementById('player2Score').innerHTML = `Score: ${player2Score}`;
         statusDisplay.innerHTML = winningMessage();
         gameActive = false;
         return;
